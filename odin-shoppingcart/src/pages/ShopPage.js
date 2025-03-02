@@ -24,8 +24,8 @@ const ShopPage = ({ cart, setCart }) => {
 
   return (
     <div>
-      <h2>Shop</h2>
-      <div className="product-list">
+      <h2 className='font-bold text-2xl text-center'>Catalog</h2>
+      <div className="grid grid-cols-3 gap-4">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} addToCart={addToCart} />
         ))}

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CartPage = ({ cart }) => {
+const CartPage = ({ initialCart = [] }) => {
+  const [cart, setCart] = useState(initialCart)
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
-  console.log(cart)
+
+  const checkOut = () => {
+    setCart([])
+  }
   return (
     <div>
       <h2>Your Cart</h2>
@@ -20,6 +24,7 @@ const CartPage = ({ cart }) => {
             ))}
           </ul>
           <h3>Total: ${calculateTotal().toFixed(2)}</h3>
+          <button onClick={checkOut}>Checkout !</button>
         </div>
       )}
     </div>
