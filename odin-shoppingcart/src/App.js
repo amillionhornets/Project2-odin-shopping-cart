@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -15,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage cart={cart} setCart={setCart} />} />
-        <Route path="/cart" element={<CartPage cart={cart} />} />
+        <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
       </Routes>
     </Router>
   );
