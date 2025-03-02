@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './input.css';
 const ProductCard = ({product, addToCart}) => {
     const [quantity, setQuantity] = useState(1)
     const increment = () => setQuantity(quantity + 1)
