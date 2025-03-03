@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-const CartPage = ({ initialCart = [] }) => {
+const CartPage = ({ initialCart }) => {
   const [cart, setCart] = useState(initialCart)
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   const checkOut = () => {
-    setCart([])
+    alert("Try again!")
+    window.location.reload(true)
   }
   return (
     <div>
